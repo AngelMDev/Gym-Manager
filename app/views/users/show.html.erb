@@ -1,0 +1,10 @@
+ <h1><%= @user.name %></h1> 
+ <%=link_to("Edit","/users/#{@user.id}/edit")%>
+ <br>
+ Available classes:
+ <br>
+ <%@klasses.each do |klass|%>
+ <%= link_to(klass.name,"/klasses") %>
+ <br>
+ <%end%>
+ 

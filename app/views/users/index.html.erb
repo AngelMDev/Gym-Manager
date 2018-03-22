@@ -1,0 +1,6 @@
+<h1>Index of Users</h1>
+<br>
+<% @users.each do |user|%>
+  <%= link_to(user.name, "/users/#{user.id}") %>
+  <br>
+<% end %>

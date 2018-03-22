@@ -1,0 +1,6 @@
+<h1>Index of Classes</h1>
+<br>
+<% @klasses.each do |klass|%>
+  <%= link_to(klass.name, "/klasses/#{klass.id}") %>
+  <br>
+<% end %>
