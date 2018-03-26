@@ -2,5 +2,9 @@
 <br>
 <% @klasses.each do |klass|%>
   <%= link_to(klass.name, "/klasses/#{klass.id}") %>
+  <%= klass.date%>
+  <%= klass.time%>
+  <br>
+  <%= klass.sign_ups%>
   <br>
 <% end %>

@@ -1,10 +1,13 @@
+  <%=link_to 'Home','/'%>
  <h1><%= @user.name %></h1> 
  <%=link_to("Edit","/users/#{@user.id}/edit")%>
  <br>
  Available classes:
  <br>
  <%@klasses.each do |klass|%>
- <%= link_to(klass.name,"/klasses") %>
+ <div><%=klass.name.capitalize%>
+ <%=button_to 'Reserve',{reservation: {user_id: @user.id, klass_id: klass.id}, controller: 'reservations', action: 'create', :method => :post}%>
  <br>
  <%end%>
+
  

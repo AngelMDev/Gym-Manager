@@ -1,4 +1,7 @@
 class Klass < ActiveRecord::Base
-  has_many :users
-  has_many :reservations, through: :users
+  has_many :reservations
+  has_many :users, through: :reservations
+  def sign_ups
+    "#{reservations.length}/#{capacity}"
+  end
 end
